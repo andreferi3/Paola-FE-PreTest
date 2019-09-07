@@ -1,0 +1,130 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #932A8A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    background-color: white;
+    margin-top: 18px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #707070;
+    font-weight: 200;
+}
+
+.navbar-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-menu h2 {
+    margin: 0;
+    font-size: 35px;
+    margin-right: 2rem;
+}
+
+.navbar-menu h2 a {
+    text-decoration: none;
+    color: #192250;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.navbar-menu h2 .active {
+    color: #AFB4D1;
+}
+
+.root-content {
+    display: flex;
+    justify-content: center;
+    background: url('../assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.person-image img {
+    margin-top: 12px;
+    filter: grayscale();
+    border: 1px solid #707070;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 428px;
+    width: 428px;
+    margin-top: 80px;
+    padding: 36px;
+    border: 1px solid #707070;
+}
+
+.person-details h1 {
+    margin: 0;
+    color: #707070;
+    font-weight: 200;
+}
+
+.person-details h3 {
+    margin: 0;
+    color: #707070;
+    font-weight: 200;
+}
+
+.id {
+    margin-bottom: 36px;
+}
+
+.id .name {
+    margin: 0;
+    font-size: 40px;
+    color: #707070;
+    font-weight: 200;
+}
+
+.id .job {
+    margin-top: 4px;
+}
+
+.more-detail .row {
+    display: flex;
+    margin-bottom: 0.6rem;
+}
+
+.more-detail .row .title {
+    display: flex;
+    flex: 0.5;
+}
+
+.more-detail .row .value {
+    flex: 1;
+}
+
+.footer {
+    height: 89px;
+    background-color: #192250;
+    display: flex;
+}
