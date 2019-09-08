@@ -78,4 +78,5 @@
 .more-detail .row .value {
     flex: 1;
     flex-grow: 1;
+    position: relative;
 }

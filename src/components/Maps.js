@@ -8,6 +8,13 @@ const mapStyles = {
 }
 
 export class Maps extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+
+        }
+    }
     render() {
         return (
             <div style={{position: 'relative'}}>
@@ -16,11 +23,11 @@ export class Maps extends Component {
                     zoom={14}
                     style={mapStyles}
                     initialCenter={{
-                        lat: -1.2884,
-                        lng: 36.8233
+                        lat: this.props.lat,
+                        lng: this.props.lng
                     }}
                 >
-                    <Marker position={{ lat: -1.2884, lng: 36.8233 }} />
+                    <Marker position={{ lat: this.props.lat, lng: this.props.lng }} />
                 </Map>
             </div>
         )

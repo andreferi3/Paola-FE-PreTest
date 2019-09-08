@@ -50,7 +50,9 @@ class Content extends Component {
                                     <div className='row'>
                                         <h3 className='title'>Location</h3>
                                         <h3>: &nbsp;</h3>
-                                        <div className='value'><Maps lat={person.location.coordinates.latitude} lng={person.location.coordinates.longitude} /></div>
+                                        <div className='value'>
+                                            <Maps lat={person.location.coordinates.latitude} lng={person.location.coordinates.longitude} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
