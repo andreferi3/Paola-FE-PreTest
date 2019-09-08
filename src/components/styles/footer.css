@@ -1,0 +1,17 @@
+.footer {
+    height: 89px;
+    background-color: #192250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.footer h1 a {
+    color: white;
+    margin-right: 2rem;
+}
+
+.footer h1 {
+    margin: 0;
+}

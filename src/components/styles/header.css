@@ -1,0 +1,70 @@
+.navbar {
+    background-color: #932A8A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    background-color: white;
+    margin-top: 18px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #707070;
+    font-weight: 200;
+}
+
+.navbar-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-menu h2 {
+    margin: 0;
+    font-size: 35px;
+    margin-right: 2rem;
+}
+
+.navbar-menu h2 .active {
+    color: #AFB4D1;
+}
+
+.menu-item .underline {
+    text-decoration: none;
+    border: 4px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #192250;
+    text-align: center;
+    position: relative;
+    font-weight: 200;
+}
+
+.underline::after {
+    width: 0%;
+    height: 4px;
+    display: block;
+    background-color: #192250;
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transition: left 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.menu-item:hover .underline::after {
+    width: 100%;
+    top: 34px;
+    left: 0;
+}
