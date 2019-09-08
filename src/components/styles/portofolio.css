@@ -32,6 +32,7 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .navbar-menu h2 {
@@ -40,15 +41,39 @@
     margin-right: 2rem;
 }
 
-.navbar-menu h2 a {
+.navbar-menu h2 .active {
+    color: #AFB4D1;
+}
+
+.menu-item .underline {
     text-decoration: none;
-    color: #192250;
+    border: 4px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 36px;
     text-transform: uppercase;
+    color: #192250;
+    text-align: center;
+    position: relative;
     font-weight: 200;
 }
 
-.navbar-menu h2 .active {
-    color: #AFB4D1;
+.underline::after {
+    width: 0%;
+    height: 4px;
+    display: block;
+    background-color: #192250;
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transition: left 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.menu-item:hover .underline::after {
+    width: 100%;
+    top: 34px;
+    left: 0;
 }
 
 .root-content {
@@ -58,6 +83,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 90%;
+}
+
+.loader {
+    background-color: white;
+    align-self: center;
+    padding: 70px 160px;
+    color: #707070;
+    font-size: 3rem;
+    font-weight: 200;
 }
 
 .container {
@@ -121,6 +155,7 @@
 
 .more-detail .row .value {
     flex: 1;
+    flex-grow: 1;
 }
 
 .footer {

@@ -47,16 +47,29 @@ class Portofolio extends Component {
                                 ))
                             }
                         </div>
-                        <div className='navbar-menu'>
-                            <h2><NavLink to='/'>About</NavLink></h2>
-                            <h2><NavLink to='/resume'>Resume</NavLink></h2>
-                            <h2><NavLink to='/education'>Education</NavLink></h2>
-                            <h2><NavLink to='/portofolio'>Portofolio</NavLink></h2>
-                        </div>
+                        {
+                            this.props.person.isLoading ? '' :
+                            <div className='navbar-menu'>
+                                <div className='menu-item'>
+                                    <h2><NavLink to='/' className='underline'>About</NavLink></h2>
+                                </div>
+                                <div className='menu-item'>
+                                    <h2><NavLink to='/resume' className='underline'>Resume</NavLink></h2>
+                                </div>
+                                <div className='menu-item'>
+                                    <h2><NavLink to='/education' className='underline'>Education</NavLink></h2>
+                                </div>
+                                <div className='menu-item'>
+                                    <h2><NavLink to='/portofolio' className='underline'>Portofolio</NavLink></h2>
+                                </div>
+                            </div>
+                        }
                     </div>
                 </nav>
                 <div className='root-content'>
+                    
                     {
+                        this.props.person.isLoading ? <h1 className='loader'>Loading</h1> :
                         this.state.persons.map(person => (
                             <div className='container'>
                                 <div className='person-image'>
